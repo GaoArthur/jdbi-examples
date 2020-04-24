@@ -29,6 +29,11 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+        </dependency>
+        <dependency>
             <groupId>org.jdbi</groupId>
             <artifactId>jdbi3-core</artifactId>
             <version>${jdbi.version}</version>
@@ -75,6 +80,8 @@
                     <compilerArgs>
                         <arg>--enable-preview</arg>
                     </compilerArgs>
+                    <source>13</source>
+                    <target>13</target>
                 </configuration>
             </plugin>
             <plugin>
