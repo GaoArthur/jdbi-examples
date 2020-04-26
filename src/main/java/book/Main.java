@@ -16,12 +16,12 @@ public class Main {
             bookDao.createTable();
             bookDao.insert(new Book("9781472154668", "Delia Owens", "Where the Crawdads Sing", Book.Format.PAPERBACK, "Little, Brown Book Group", LocalDate.parse("2019-12-20"), 384, true));
             bookDao.insert(new Book("9781529029581", "Toshikazu Kawaguchi", "Before the Coffee Gets Cold", Book.Format.PAPERBACK, "Pan MacMillan", LocalDate.parse("2019-11-07"), 224, true));
-            bookDao.insert(new Book("123456", "Example Arthor", "Example Title", Book.Format.HARDBACK, "Example Publisher", LocalDate.parse("1900-01-01"),100,false));
+            bookDao.insert(new Book("123456", "Example Arthor", "Example Title", Book.Format.HARDBACK, "Example Publisher", LocalDate.parse("1900-01-01"), 100, false));
             System.out.println("-----Original Book-----");
             bookDao.findAll().stream().forEach(System.out::println);
             Book book = bookDao.find("123456").get();
             bookDao.delete(book);
-            System.out.println("---After Deleted Book---");
+            System.out.println("------Current Book------");
             bookDao.findAll().stream().forEach(System.out::println);
         }
     }
